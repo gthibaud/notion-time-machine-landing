@@ -59,12 +59,12 @@ export const EmailForm = () => {
                     type="email"
                     name="EMAIL"
                     id="EMAIL"
-                    placeholder="Votre adresse email"
+                    placeholder="Email address"
                     required
                 />
             </label>
             {isLoading ? (
-                <span className="text-primary">Envoi en cours...</span>
+                <span className="text-primary">Loading...</span>
             ) : (
                 <TiltingContainer>
                     <button
@@ -72,17 +72,17 @@ export const EmailForm = () => {
                         disabled={isLoading}
                         type="submit"
                     >
-                        Envoyer
+                        Join the beta
                     </button>
                 </TiltingContainer>
             )}
             <p className="text-sm text-gray-500">
-                Votre email ne sera utilisé que pour vous envoyer une notification lorsque
-                l'application sera disponible.{' '}
+                We will only use your email address to send you the early access notification.
+                Please{' '}
                 <u>
-                    <a href="mailto:gregoire@creastel.com">Contactez-vous</a>
+                    <a href="mailto:gregoire@creastel.com">contact-us</a>
                 </u>{' '}
-                pour toute demande de suppression de vos données.
+                for any data deletion request.
             </p>
         </form>
     );

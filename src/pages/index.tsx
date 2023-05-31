@@ -23,13 +23,8 @@ const Main = () => {
         <div className="flex flex-col align-center">
             <Header />
             <MainContainer>
-                <BigTitle>
-                    Vos <i>yeux</i> méritent d’être entraînés
-                </BigTitle>
-                <SubTitle>Les écrans fatiguent et assèchent nos yeux.</SubTitle>
-                <SubTitle>
-                    Retrouvez le <i>focus</i> avec les exercices de Klipse.
-                </SubTitle>
+                <BigTitle>Notion Time Machine</BigTitle>
+                <SubTitle>We backup your Notion workspace to secure things that matter</SubTitle>
                 <div className="flex justify-center px-4 mt-12">
                     <TiltingContainer>
                         <StaticImage
@@ -39,111 +34,101 @@ const Main = () => {
                         />
                     </TiltingContainer>
                 </div>
-                <SectionTitle>Les écrans abîment nos yeux</SectionTitle>
+                <SectionTitle>Secure things that matter</SectionTitle>
                 <SubTitle>
-                    Nos yeux sont les outils les plus sensibles et précieux.
-                    <br />
-                    La surexposition aux écrans n’est pas sans conséquences sur notre vision.
+                    Would you be able to keep your business running if you lost access to Notion
+                    tomorrow morning?
                 </SubTitle>
                 <CardSection>
                     <Card
                         image={
                             <StaticImage
-                                src="../../static/images/problem-1.png"
-                                alt="Problem image 1"
+                                src="../../static/images/bulb.svg"
+                                alt="Bulb image"
                                 height={100}
                                 placeholder="none"
                                 backgroundColor={BACKGROUND_DEFAULT}
                             />
                         }
-                        title="Sécheresses oculaire"
-                        description="En moyenne, nous clignons 5 fois moins des yeux devant un écran, ce qui favorise leur dessèchement."
+                        title="Crucial data"
+                        description="Your best ideas are stored in Notion, perhaps even your customers, contracts, strategy."
                     />
                     <Card
                         image={
                             <StaticImage
-                                src="../../static/images/problem-2.png"
-                                alt="Problem image 2"
+                                src="../../static/images/coffee.svg"
+                                alt="Coffee image"
                                 height={100}
                                 placeholder="none"
                                 backgroundColor={BACKGROUND_DEFAULT}
                             />
                         }
-                        title="Fatigue"
-                        description="Les écrans fatiguent notre vision ce qui peut provoquer des maux de têtes en cas d'exposition prolongée."
+                        title="Critical risk"
+                        description="Mistakes can happen: deleting an access, forgetting to renew a license: 0 risk don’t exists."
                     />
                     <Card
                         image={
                             <StaticImage
-                                src="../../static/images/problem-3.png"
-                                alt="Problem image 3"
+                                src="../../static/images/error.svg"
+                                alt="Error image"
                                 height={100}
                                 placeholder="none"
                                 backgroundColor={BACKGROUND_DEFAULT}
                             />
                         }
-                        title="Perte de concentration"
-                        description="Rester dans la même position provoque des pertes de lucidité et de productivité."
+                        title="Don’t depend on Notion"
+                        description="Don't let your business, your studies or your life depend on Notion, mitigate the risk."
                     />
                 </CardSection>
-                <SectionTitle>Klipse, des exercices pour prendre soin de ses yeux</SectionTitle>
+                <SectionTitle>We backup every page in a secure vault</SectionTitle>
                 <Feature
                     image={
                         <StaticImage
-                            src="../../static/images/feature-1.png"
-                            alt="Exercice mobile image"
+                            src="../../static/images/clock.svg"
+                            alt="Clock image"
                             width={300}
                             placeholder="none"
                             backgroundColor={BACKGROUND_DEFAULT}
                             layout="fixed"
                         />
                     }
-                    title="Mettez vos yeux à l'exercice"
+                    title="Automated backups, simple as that"
                     description={
                         <>
-                            Notre application disponible sur ordinateur, téléphone et tablette met à
-                            votre disposition des exercices simples pour détendre vos yeux et
-                            retrouver une clarté d’esprit.
-                            <br />
-                            <br />
-                            La section conseils comporte une liste de recommandations simples pour
-                            limiter l’impact des écrans sur nos yeux.
+                            Connect your workspace to Notion Time Machine and that's it! We'll take
+                            care of backing up all your data at regular intervals, and alert you if
+                            an error occurs.
                         </>
                     }
                 />
                 <Feature
                     image={
                         <StaticImage
-                            src="../../static/images/feature-2.png"
-                            alt="Mobile notifications image"
+                            src="../../static/images/files.svg"
+                            alt="Files image"
                             width={300}
                             placeholder="none"
                             backgroundColor={BACKGROUND_DEFAULT}
                             layout="fixed"
                         />
                     }
-                    title="Libérez votre charge mentale"
-                    description="Klipse vous envoie des notifications au long de la journée pour vous rappeler de faire des pauses. Paramétrez vos alertes en un clic."
+                    title="High-level safety and resilience "
+                    description="Notion Time Machine encrypts all backups and exchanges between Notion APIs and our system. We offer AES-256 encryption for all backups, making it impossible for us to decrypt them, even by us."
                     inversedDirection
-                    additionalFooter={
-                        <p className="text-sm text-gray-500">
-                            Les notifications peuvent être désactivées.
-                        </p>
-                    }
                 />
                 <Feature
                     image={
                         <StaticImage
-                            src="../../static/images/feature-3.png"
-                            alt="Statistics image"
+                            src="../../static/images/computer.svg"
+                            alt="Computer image"
                             width={300}
                             placeholder="none"
                             backgroundColor={BACKGROUND_DEFAULT}
                             layout="fixed"
                         />
                     }
-                    title="Suivez votre évolution"
-                    description="Prenez du recul sur la santé de vos yeux avec notre outil de statistiques, synchronisées entre tous vos appareils. Suivez l’évolution du nombre d’exercices dans le temps."
+                    title="Manage backups, restore data anytime"
+                    description="Thanks to the administration portal, you can define your backup and data retention strategies. In the blink of an eye, you can view your backups, go back in time and restore older versions."
                     additionalFooter={
                         <StaticImage
                             src="../../static/images/cat.png"
@@ -155,24 +140,24 @@ const Main = () => {
                         />
                     }
                 />
-                <SectionTitle>
-                    Klipse est bientôt disponible <u>gratuitement !</u>
-                </SectionTitle>
+                <SectionTitle>Our plans</SectionTitle>
+                <SubTitle>No commitments or hidden costs, we have plans for everyone!</SubTitle>
+                todo
+                <SectionTitle>Join Notion Time Machine beta!</SectionTitle>
                 <div id="telecharger">
                     <Columns columnsNumber={2}>
                         <div className="flex flex-col flex-1 gap-6">
                             <Body>
-                                Vous avez les yeux secs, souffrez de fatigue visuelle ? Entrez votre
-                                email et soyez les premiers à être informés de la sortie de Klipse.
-                                Nous vous enverrons un email pour télécharger l’application.
+                                Be the first to benefit from access to Notion Time Machine by
+                                joining the waiting list.
                             </Body>
                             <EmailForm />
                         </div>
                         <div className="flex-1">
                             <TiltingContainer>
                                 <StaticImage
-                                    src="../../static/images/yoga.png"
-                                    alt="Yoga image"
+                                    src="../../static/images/relax.png"
+                                    alt="Zen image"
                                     width={460}
                                     placeholder="none"
                                     backgroundColor={BACKGROUND_DEFAULT}

@@ -11,7 +11,7 @@ export const Button = ({ children, to = '/' }: ButtonProps) => {
     return (
         <TiltingContainer>
             <Link to={to}>
-                <button className="text-base font-sans font-medium text-white bg-primary px-4 py-2 rounded-lg hover:bg-secondary transition-colors duration-300 ease-in-out">
+                <button className="text-base font-sans font-medium text-white bg-textBody px-3 py-2 rounded-md hover:bg-textBody transition-colors duration-300 ease-in-out">
                     {children}
                 </button>
             </Link>
