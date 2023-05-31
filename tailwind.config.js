@@ -1,0 +1,23 @@
+/** @type {import('tailwindcss').Config} */
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
+module.exports = {
+    content: ['./src/**/*.{js,ts,jsx,tsx}'],
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['Inter', ...fontFamily.sans],
+            },
+            colors: {
+                primary: '#1A4039',
+                secondary: '#3F7666',
+                body: '#4E4E4E',
+                bodyLight: '#6F6F6F',
+                background: '#FEF7EF',
+                backgroundVariant: '#F4E9DD',
+                divider: '#E5E5E5',
+            },
+        },
+    },
+    plugins: [],
+};
