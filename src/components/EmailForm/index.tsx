@@ -15,13 +15,10 @@ export const EmailForm = () => {
         setLoading(true);
 
         // Post the email to Brevo
-        fetch(
-            'https://27afad56.sibforms.com/serve/MUIEALupgjMf-CkQY0IUwUkxTXmogaJuDKtl3vwlxpXJKBD0FaU2d-DVy3zQG-7fitnhq7LC4dRYA-Z8q2OcNGOCNKDva0ce-KGAY_4mGYewOHmKoPUAAPCiFjEYtRPoEANHm_t6gjVvb0BA_U0E3EAADcBApuw2s3JTr84r_4FHerywZm6Bp5g8M25jPkmxxdvPXJ-iOn_HEp2y',
-            {
-                method: 'POST',
-                body: data,
-            },
-        )
+        fetch(process.env.GATSBY_EMAIL_FORM_API_URL || 'https://api.brevo.co/email-form', {
+            method: 'POST',
+            body: data,
+        })
             .then((res) => {
                 // Send a success message
                 toast.success('Thanks, you will received an email very soon!');
