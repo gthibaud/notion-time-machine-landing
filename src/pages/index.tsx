@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { LockDesktop, LockShield, Sparkles } from 'gthibaud-icons-react';
+import { LockDesktop, LockShield, Megaphone, Sparkles } from 'gthibaud-icons-react';
 import { Toaster } from 'react-hot-toast';
 import { Columns } from '../components/Container/Columns';
 import { MainContainer } from '../components/Container/Main';
@@ -208,7 +208,7 @@ const Main = () => {
                 </SectionTitle>
                 <div id="download">
                     <Columns columnsNumber={2}>
-                        <div className="flex flex-col flex-1 gap-6">
+                        <div className="flex flex-col flex-1 gap-4">
                             <Body>
                                 Be the first to benefit from access to Notion Time Machine by
                                 joining the waiting list.
@@ -228,7 +228,12 @@ const Main = () => {
                         </div>
                     </Columns>
                 </div>
-                <SectionTitle>Plus d'informations</SectionTitle>
+                <SectionTitle>
+                    <span>
+                        FAQ
+                        <Megaphone className="fill-paletteBlue" />
+                    </span>
+                </SectionTitle>
                 <FAQ
                     question="Quels types d'exercices propose Klipse ?"
                     answer="Klipse offre des exercices rapides (< 5 minutes) basés sur le yoga des yeux. Ces exercices permettent de réduire la fatigue oculaire, hydrater les yeux et de retrouver une clarté d'esprit. Ils peuvent être pratiqués à tout moment de la journée (au réveil, au milieu d'une session de travail, le soir, etc.)."

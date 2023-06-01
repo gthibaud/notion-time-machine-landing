@@ -24,9 +24,7 @@ export const EmailForm = () => {
         )
             .then((res) => {
                 // Send a success message
-                toast.success(
-                    "Merci, nous vous enverrons un mail dès que l'appli sera disponible !",
-                );
+                toast.success('Thanks, you will received an email very soon!');
 
                 // Reset the form
                 (e.target as HTMLFormElement).reset();
@@ -36,7 +34,7 @@ export const EmailForm = () => {
             })
             .catch((err) => {
                 // Send an error message
-                toast.error('Une erreur est survenue, veuillez réessayer plus tard.');
+                toast.error('An unexpected error occured. Please try again later.');
 
                 // Reset loading state
                 setLoading(false);
@@ -68,7 +66,7 @@ export const EmailForm = () => {
             ) : (
                 <TiltingContainer>
                     <button
-                        className="bg-primary text-white rounded-lg p-2 w-full"
+                        className="bg-textBody hover:bg-textBody text-white rounded-lg p-2 w-full"
                         disabled={isLoading}
                         type="submit"
                     >
