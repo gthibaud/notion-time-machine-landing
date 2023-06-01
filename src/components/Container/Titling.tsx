@@ -11,11 +11,11 @@ interface TiltingContainerProps {
 export const TiltingContainer: FC<TiltingContainerProps> = (props) => {
     const { glare, max, ...rest } = props;
     const options = {
-        scale: 1.02,
+        scale: 1.05,
         speed: 1000,
         max: max ? max : 1,
-        perspective: 500,
-        maxGlare: 0.01,
+        perspective: 300,
+        maxGlare: 0.005,
         glare: glare ? true : false,
         fullPageListening: true,
         gyroscope: true,

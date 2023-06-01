@@ -10,11 +10,18 @@ export const Header = () => {
                         to="/"
                         ariaLabel="Home"
                     >
-                        <p className="font-semibold text-xl text-left">Notion Time Machine</p>
+                        <p className="font-semibold text-xl text-left tracking-tight">
+                            Notion Time Machine
+                        </p>
                     </ButtonUnstyled>
                 </div>
                 <div className="flex justify-end shrink-0">
-                    <Button to="/#telecharger">Join the beta</Button>
+                    <Button
+                        to="/#telecharger"
+                        className="bg-textBody hover:bg-textBody rounded-md"
+                    >
+                        Join the beta
+                    </Button>
                 </div>
             </nav>
         </header>

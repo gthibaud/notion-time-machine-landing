@@ -5,13 +5,16 @@ import { TiltingContainer } from '../Container/Titling';
 type ButtonProps = {
     children: ReactNode;
     to?: string;
+    className?: string;
 };
 
-export const Button = ({ children, to = '/' }: ButtonProps) => {
+export const Button = ({ children, to = '/', className = '' }: ButtonProps) => {
     return (
-        <TiltingContainer>
+        <TiltingContainer className={className}>
             <Link to={to}>
-                <button className="text-base font-sans font-medium text-white bg-textBody px-3 py-2 rounded-md hover:bg-textBody transition-colors duration-300 ease-in-out">
+                <button
+                    className={`font-medium text-white px-3 py-2 transition-colors duration-300 ease-in-out ${className}`}
+                >
                     {children}
                 </button>
             </Link>

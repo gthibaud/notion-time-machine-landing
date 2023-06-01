@@ -34,7 +34,7 @@ const config: GatsbyConfig = {
             resolve: `gatsby-plugin-web-font-loader`,
             options: {
                 google: {
-                    families: [`Inter\:400,500,600`],
+                    families: [`Inter\:400,500,600,700`],
                 },
             },
         },

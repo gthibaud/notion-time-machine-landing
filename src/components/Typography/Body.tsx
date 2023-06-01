@@ -6,5 +6,5 @@ type BodyProps = {
 };
 
 export const Body = ({ children, className: additionalClassNames = '' }: BodyProps) => {
-    return <p className={`font-sans text-body ${additionalClassNames}`}>{children}</p>;
+    return <p className={`text-body ${additionalClassNames}`}>{children}</p>;
 };

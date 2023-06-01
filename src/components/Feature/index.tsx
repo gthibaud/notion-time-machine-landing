@@ -18,15 +18,15 @@ export const Feature = ({
     additionalFooter,
 }: FeatureProps) => {
     return (
-        <div className="mx-auto flex py-4 justify-center">
+        <div className="mx-auto flex py-10 justify-center">
             <div className={`flex flex-col sm:flex-row gap-10`}>
                 <div className="flex mx-auto">
                     {(!inversedDirection ||
                         (inversedDirection && isBrowser() && window.innerWidth < 640)) &&
                         image}
                 </div>
-                <div className="flex flex-col gap-6 my-auto max-w-lg">
-                    <h3 className="text-xl font-title text-primary">{title}</h3>
+                <div className="flex flex-col gap-4 my-auto max-w-lg">
+                    <h3 className="text-xl font-semibold text-primary">{title}</h3>
                     <Body className="max-w-prose">{description}</Body>
                     {additionalFooter}
                 </div>

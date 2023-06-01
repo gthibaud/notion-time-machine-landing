@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import { LockDesktop, LockShield, Sparkles } from 'gthibaud-icons-react';
 import { Toaster } from 'react-hot-toast';
-import { Card } from '../components/Card';
 import { Columns } from '../components/Container/Columns';
 import { MainContainer } from '../components/Container/Main';
 import { TiltingContainer } from '../components/Container/Titling';
@@ -10,7 +10,10 @@ import { FAQ } from '../components/FAQ';
 import { Feature } from '../components/Feature';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
+import { Plan } from '../components/Plan';
+import { Problem } from '../components/Problem';
 import { CardSection } from '../components/Section/CardSection';
+import { PlanSection } from '../components/Section/PlanSection';
 import { BigTitle } from '../components/Typography/BigTitle';
 import { Body } from '../components/Typography/Body';
 import { SectionTitle } from '../components/Typography/SectionTitle';
@@ -23,9 +26,16 @@ const Main = () => {
         <div className="flex flex-col align-center">
             <Header />
             <MainContainer>
-                <BigTitle>Notion Time Machine</BigTitle>
-                <SubTitle>We backup your Notion workspace to secure things that matter</SubTitle>
-                <div className="flex justify-center px-4 mt-12">
+                <BigTitle>Making your Notion data safe</BigTitle>
+                <SubTitle>
+                    <span>
+                        We backup your Notion workspaces
+                        <br />
+                        to secure things that matter
+                        <Sparkles className="fill-palettePurple" />
+                    </span>
+                </SubTitle>
+                <div className="flex justify-center px-4 mt-8">
                     <TiltingContainer>
                         <StaticImage
                             className="max-w-screen-lg"
@@ -34,16 +44,21 @@ const Main = () => {
                         />
                     </TiltingContainer>
                 </div>
-                <SectionTitle>Secure things that matter</SectionTitle>
+                <SectionTitle>
+                    <span>
+                        Secure things that matter
+                        <LockShield className="fill-paletteRed" />
+                    </span>
+                </SectionTitle>
                 <SubTitle>
                     Would you be able to keep your business running if you lost access to Notion
                     tomorrow morning?
                 </SubTitle>
                 <CardSection>
-                    <Card
+                    <Problem
                         image={
                             <StaticImage
-                                src="../../static/images/bulb.svg"
+                                src="../../static/images/bulb.jpg"
                                 alt="Bulb image"
                                 height={100}
                                 placeholder="none"
@@ -53,10 +68,10 @@ const Main = () => {
                         title="Crucial data"
                         description="Your best ideas are stored in Notion, perhaps even your customers, contracts, strategy."
                     />
-                    <Card
+                    <Problem
                         image={
                             <StaticImage
-                                src="../../static/images/coffee.svg"
+                                src="../../static/images/coffee.jpg"
                                 alt="Coffee image"
                                 height={100}
                                 placeholder="none"
@@ -66,10 +81,10 @@ const Main = () => {
                         title="Critical risk"
                         description="Mistakes can happen: deleting an access, forgetting to renew a license: 0 risk don’t exists."
                     />
-                    <Card
+                    <Problem
                         image={
                             <StaticImage
-                                src="../../static/images/error.svg"
+                                src="../../static/images/error.jpg"
                                 alt="Error image"
                                 height={100}
                                 placeholder="none"
@@ -80,13 +95,18 @@ const Main = () => {
                         description="Don't let your business, your studies or your life depend on Notion, mitigate the risk."
                     />
                 </CardSection>
-                <SectionTitle>We backup every page in a secure vault</SectionTitle>
+                <SectionTitle>
+                    <span>
+                        We backup every page in a secure vault
+                        <LockDesktop className="fill-paletteBlue" />
+                    </span>
+                </SectionTitle>
                 <Feature
                     image={
                         <StaticImage
-                            src="../../static/images/clock.svg"
+                            src="../../static/images/clock.jpg"
                             alt="Clock image"
-                            width={300}
+                            height={120}
                             placeholder="none"
                             backgroundColor={BACKGROUND_DEFAULT}
                             layout="fixed"
@@ -104,9 +124,9 @@ const Main = () => {
                 <Feature
                     image={
                         <StaticImage
-                            src="../../static/images/files.svg"
+                            src="../../static/images/files.jpg"
                             alt="Files image"
-                            width={300}
+                            height={120}
                             placeholder="none"
                             backgroundColor={BACKGROUND_DEFAULT}
                             layout="fixed"
@@ -119,9 +139,9 @@ const Main = () => {
                 <Feature
                     image={
                         <StaticImage
-                            src="../../static/images/computer.svg"
+                            src="../../static/images/computer.jpg"
                             alt="Computer image"
-                            width={300}
+                            height={120}
                             placeholder="none"
                             backgroundColor={BACKGROUND_DEFAULT}
                             layout="fixed"
@@ -129,22 +149,64 @@ const Main = () => {
                     }
                     title="Manage backups, restore data anytime"
                     description="Thanks to the administration portal, you can define your backup and data retention strategies. In the blink of an eye, you can view your backups, go back in time and restore older versions."
-                    additionalFooter={
-                        <StaticImage
-                            src="../../static/images/cat.png"
-                            alt="Cat image decoration."
-                            width={200}
-                            placeholder="none"
-                            backgroundColor={BACKGROUND_DEFAULT}
-                            layout="fixed"
-                        />
-                    }
                 />
                 <SectionTitle>Our plans</SectionTitle>
-                <SubTitle>No commitments or hidden costs, we have plans for everyone!</SubTitle>
-                todo
-                <SectionTitle>Join Notion Time Machine beta!</SectionTitle>
-                <div id="telecharger">
+                <SubTitle>
+                    No commitments or hidden costs,
+                    <br /> we have plans for everyone!
+                </SubTitle>
+                <br />
+                <PlanSection>
+                    <Plan
+                        to="/#download"
+                        title="Monthly backup"
+                        image={
+                            <StaticImage
+                                src="../../static/images/monthly.png"
+                                alt="Backup image"
+                                height={140}
+                                placeholder="none"
+                            />
+                        }
+                        description="Ideal for individuals, students, or families that want to stay zen"
+                        price="2$ / month"
+                    />
+                    <Plan
+                        to="/#download"
+                        title="Weekly backup"
+                        image={
+                            <StaticImage
+                                src="../../static/images/weekly.png"
+                                alt="Backup image"
+                                height={140}
+                                placeholder="none"
+                            />
+                        }
+                        description="Ideal for startups who take care of their data on a limited budget"
+                        price="5$ / month"
+                    />
+                    <Plan
+                        to="/#download"
+                        title="Daily backup"
+                        image={
+                            <StaticImage
+                                src="../../static/images/daily.png"
+                                alt="Backup image"
+                                height={140}
+                                placeholder="none"
+                            />
+                        }
+                        description="Ideal for SME that must guarantee high levels of service"
+                        price="10$ / month"
+                    />
+                </PlanSection>
+                <SectionTitle>
+                    <span>
+                        Join Notion Time Machine beta!
+                        <Sparkles className="fill-palettePurple" />
+                    </span>
+                </SectionTitle>
+                <div id="download">
                     <Columns columnsNumber={2}>
                         <div className="flex flex-col flex-1 gap-6">
                             <Body>
@@ -181,7 +243,7 @@ const Main = () => {
                         <>
                             L'application est en cours de développement. Inscrivez-vous à notre{' '}
                             <u>
-                                <Link to="/#telecharger">liste d'attente</Link>
+                                <Link to="/#download">liste d'attente</Link>
                             </u>{' '}
                             pour être informé de sa sortie.
                         </>
