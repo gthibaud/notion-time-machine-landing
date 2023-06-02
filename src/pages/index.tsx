@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { LockDesktop, LockShield, Megaphone, Sparkles } from 'gthibaud-icons-react';
 import { Toaster } from 'react-hot-toast';
@@ -235,39 +234,27 @@ const Main = () => {
                     </span>
                 </SectionTitle>
                 <FAQ
-                    question="Quels types d'exercices propose Klipse ?"
-                    answer="Klipse offre des exercices rapides (< 5 minutes) basés sur le yoga des yeux. Ces exercices permettent de réduire la fatigue oculaire, hydrater les yeux et de retrouver une clarté d'esprit. Ils peuvent être pratiqués à tout moment de la journée (au réveil, au milieu d'une session de travail, le soir, etc.)."
+                    question="Can I save the backups on my own storage?"
+                    answer="Backup to your own storage will be available in autumn 2023. We plan to make it possible to export data to Google Drive. In the meantime, you should know that Notion Time Machine hosts your data in a fully encrypted (AES 256) manner, making all your data unreadable, even by us."
                 />
                 <FAQ
-                    question="Est-ce que Klipse peut améliorer ma vue ?"
-                    answer="Non, Klipse ne peut pas améliorer votre vue, mais les exercices détendent vos yeux et entraînent vos muscles. Si vous souffrez de troubles visuels, consultez un ophtalmologue ou un orthoptiste."
+                    question="Where are backups hosted?"
+                    answer="Backups are hosted at AWS on S3 spaces, fully encrypted using the AES 256 algorithm."
                 />
                 <FAQ
-                    question="Comment télécharger l'application ?"
+                    question="Is there any limit on the number of backups?"
+                    answer="No, Notion Time Machine does not limit the number of backups. You can keep as many backups as you want, for as long as you want. We will soon offer the possibility to define a retention policy to automatically delete backups after a certain period of time."
+                />
+                <FAQ
+                    question="Who's behind the project?"
                     answer={
                         <>
-                            L'application est en cours de développement. Inscrivez-vous à notre{' '}
+                            Notion Time Machine is developed by Creastel Labs, a project led by
+                            Grégoire Thibaud and Jean Haberer. Don't hesitate to{' '}
                             <u>
-                                <Link to="/#download">liste d'attente</Link>
+                                <a href="mailto:gregoire@creastel.com">contact</a>
                             </u>{' '}
-                            pour être informé de sa sortie.
-                        </>
-                    }
-                />
-                <FAQ
-                    question="Combien coûte Klipse ?"
-                    answer="Klipse est une application totalement gratuite. Nous prévoyons d'ajouter des fonctionnalités payantes à l'avenir (synchronisation de comptes, etc.)."
-                />
-                <FAQ
-                    question="Qui se cache derrière le projet ?"
-                    answer={
-                        <>
-                            Klipse est développé par Creastel Labs, un projet mené par Grégoire
-                            Thibaud et Jean Haberer. N'hésitez pas à nous{' '}
-                            <u>
-                                <a href="mailto:gregoire@creastel.com">contacter</a>
-                            </u>{' '}
-                            pour en savoir plus.
+                            us.
                         </>
                     }
                 />
@@ -283,11 +270,11 @@ export default Main;
 // Head is automatically injected in the page by Gatsby
 export const Head = () => (
     <>
-        <html lang="fr" />
-        <title>Klipse – Vos yeux méritent d'être entraînés</title>
+        <html lang="en" />
+        <title>Notion Time Machine – Making your Notion data safe</title>
         <meta
             name="description"
-            content="Klipse est une application qui vous aide à prendre soin de vos yeux. Retrouvez le focus avec des exercices simples sur votre téléphone ou votre ordinateur."
+            content="Notion time Machine backup your Notion workspaces automatically to secure things that matter."
         />
         <meta charSet="utf-8" />
     </>
