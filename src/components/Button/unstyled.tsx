@@ -6,11 +6,17 @@ type ButtonUnstyledProps = {
     children: ReactNode;
     to?: string;
     ariaLabel: string;
+    className?: string;
 };
 
-export const ButtonUnstyled = ({ children, to = '/', ariaLabel }: ButtonUnstyledProps) => {
+export const ButtonUnstyled = ({
+    children,
+    to = '/',
+    ariaLabel,
+    className,
+}: ButtonUnstyledProps) => {
     return (
-        <TiltingContainer>
+        <TiltingContainer className={className}>
             <Link
                 to={to}
                 aria-label={ariaLabel}

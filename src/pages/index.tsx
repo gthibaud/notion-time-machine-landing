@@ -1,6 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image';
-import { LockDesktop, LockShield, Megaphone, Sparkles } from 'gthibaud-icons-react';
+import { ChevronRight, LockDesktop, LockShield, Megaphone, Sparkles } from 'gthibaud-icons-react';
 import { Toaster } from 'react-hot-toast';
+import { ButtonUnstyled } from '../components/Button/unstyled';
 import { Columns } from '../components/Container/Columns';
 import { MainContainer } from '../components/Container/Main';
 import { TiltingContainer } from '../components/Container/Titling';
@@ -199,13 +200,24 @@ const Main = () => {
                         price="10$ / month"
                     />
                 </PlanSection>
+                <ButtonUnstyled
+                    to="/#download"
+                    ariaLabel="Student program"
+                    className="flex justify-center"
+                >
+                    <span className="text-paletteBlue fill-paletteBlue">
+                        Are you a student? Register with your university email address to get free
+                        access to monthly plan
+                        <ChevronRight />
+                    </span>
+                </ButtonUnstyled>
                 <SectionTitle>
-                    <span>
+                    <span id="download">
                         Join Notion Time Machine beta!
                         <Sparkles className="fill-palettePurple" />
                     </span>
                 </SectionTitle>
-                <div id="download">
+                <div>
                     <Columns columnsNumber={2}>
                         <div className="flex flex-col flex-1 gap-4">
                             <Body>
