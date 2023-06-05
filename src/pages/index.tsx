@@ -26,10 +26,10 @@ const Main = () => {
         <div className="flex flex-col align-center">
             <Header />
             <MainContainer>
-                <BigTitle>Making your Notion workspaces safe</BigTitle>
+                <BigTitle>Making your Notion data safe</BigTitle>
                 <SubTitle>
                     <span>
-                        We backup your Notion data
+                        We backup your Notion workspaces
                         <br />
                         to secure things that matter
                         <Sparkles className="fill-palettePurple" />
