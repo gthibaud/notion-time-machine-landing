@@ -35,6 +35,10 @@ export const EmailForm = () => {
 
                 // Reset loading state
                 setLoading(false);
+            })
+            .finally(() => {
+                // Redirect to page /subscribe
+                window.location.href = '/subscribe';
             });
     };
 
