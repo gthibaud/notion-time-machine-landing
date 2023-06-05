@@ -17,7 +17,7 @@ export const Header = () => {
                 </div>
                 <div className="flex justify-end shrink-0">
                     <Button
-                        to="/#telecharger"
+                        to="/#download"
                         className="bg-textBody hover:bg-textBody rounded-md"
                     >
                         Join the beta
