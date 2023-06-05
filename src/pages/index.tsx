@@ -26,10 +26,10 @@ const Main = () => {
         <div className="flex flex-col align-center">
             <Header />
             <MainContainer>
-                <BigTitle>Making your Notion data safe</BigTitle>
+                <BigTitle>Making your Notion workspaces safe</BigTitle>
                 <SubTitle>
                     <span>
-                        We backup your Notion workspaces
+                        We backup your Notion data
                         <br />
                         to secure things that matter
                         <Sparkles className="fill-palettePurple" />
@@ -97,7 +97,7 @@ const Main = () => {
                 </CardSection>
                 <SectionTitle>
                     <span>
-                        We backup every page in a secure vault
+                        We backup every block in a secure vault
                         <LockDesktop className="fill-paletteBlue" />
                     </span>
                 </SectionTitle>
